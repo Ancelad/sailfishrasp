@@ -57,6 +57,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QmlHandler> qh(new QmlHandler());
     QScopedPointer<SQLtoQML> sqltoqml(new SQLtoQML());
     QScopedPointer<QQuickView> qView(SailfishApp::createView());
+    QScopedPointer<Positioning> positioning(new Positioning())
 
     qView->setSource(SailfishApp::pathTo("qml/FirstTry.qml"));
     qView->rootContext()->setContextProperty("qmlHandler", qh.data());
