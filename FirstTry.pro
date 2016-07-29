@@ -22,8 +22,8 @@ SOURCES += src/FirstTry.cpp \
     src/qmlhandler.cpp \
     src/sqltoqml.cpp \
     src/searchhint.cpp \
-    src/thread.cpp
-    src/Positioning.cpp
+    src/thread.cpp \
+    src/Positioning.cpp \
     src/sqltoqml.cpp
 
 OTHER_FILES += qml/FirstTry.qml \
@@ -54,8 +54,8 @@ HEADERS += \
     src/qmlhandler.h \
     src/sqltoqml.h \
     src/searchhint.h \
-    src/thread.h
-    src/Positioning.h
+    src/thread.h \
+    src/Positioning.h \
     src/sqltoqml.h
 
 DISTFILES += \
