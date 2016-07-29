@@ -29,6 +29,7 @@
 */
 
 import QtQuick 2.0
+import QtPositioning 5.2
 import Sailfish.Silica 1.0
 import firsttry 1.0
 import "../views"
@@ -37,6 +38,11 @@ import org.crypt.rasp 1.0
 
 Page {
     id: page
+
+    PositionSource {
+        id: positionSource
+        active: true
+    }
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {

@@ -56,7 +56,20 @@ int main(int argc, char *argv[])
     qmlRegisterType<SQLtoQML>("org.crypt.rasp", 1, 0, "SQLtoQML");
     //    return SailfishApp::main(argc, argv);
 
+<<<<<<< 6546b2d8a80444e0abc3240ff2b2f7306f08c60e
     //    QmlHandler* qh = new QmlHandler();
+=======
+    QScopedPointer<QGuiApplication> sailfishRaspApp(SailfishApp::application(argc, argv));
+
+    QScopedPointer<QmlHandler> qh(new QmlHandler());
+    QScopedPointer<SQLtoQML> sqltoqml(new SQLtoQML());
+    QScopedPointer<QQuickView> qView(SailfishApp::createView());
+    QScopedPointer<Positioning> positioning(new Positioning())
+
+    qView->setSource(SailfishApp::pathTo("qml/FirstTry.qml"));
+    qView->rootContext()->setContextProperty("qmlHandler", qh.data());
+    qView->rootContext()->setContextProperty("SQLtoQML", sqltoqml.data());
+>>>>>>> positioning and geo
 
         QQuickView* qView = SailfishApp::createView();
         qView->setSource(SailfishApp::pathTo("qml/FirstTry.qml"));
