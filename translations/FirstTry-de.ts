@@ -9,29 +9,6 @@
     </message>
 </context>
 <context>
-    <name>FirstPage</name>
-    <message>
-        <source>Расписание электричек</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Москва и область</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Сменить регион</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Откуда</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Куда</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>SecondPage</name>
     <message>
         <source>Nested Page</source>

@@ -28,15 +28,13 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#ifdef QT_QML_DEBUG
 #include <QtQuick>
-#endif
 
-#include "qmlhandler.h"
 #include <sailfishapp.h>
 #include <QQuickView>
 #include <QGuiApplication>
 #include <QQmlContext>
+#include "qmlhandler.h"
 
 int main(int argc, char *argv[])
 {
@@ -48,17 +46,20 @@ int main(int argc, char *argv[])
     //   - SailfishApp::pathTo(QString) to get a QUrl to a resource file
     //
     // To display the view, call "show()" (will show fullscreen on device).
+    qmlRegisterType<Thread>("firsttry", 1, 0, "Thread");
+    qmlRegisterType<QmlHandler>("firsttry", 1, 0, "QmlHandler");
+    return SailfishApp::main(argc, argv);
 
-    QGuiApplication * sailfishRaspApp = SailfishApp::application(argc, argv);
+//    QGuiApplication * sailfishRaspApp = SailfishApp::application(argc, argv);
 
-    QmlHandler* qh = new QmlHandler();
+//    QmlHandler* qh = new QmlHandler();
 
-    QQuickView* qView = SailfishApp::createView();
-    qView->setSource(SailfishApp::pathTo("qml/FirstTry.qml"));
-    qView->rootContext()->setContextProperty("qmlHandler",qh);
-    qView->show();
+//    QQuickView* qView = SailfishApp::createView();
+//    qView->setSource(SailfishApp::pathTo("qml/FirstTry.qml"));
+//    qView->rootContext()->setContextProperty("qmlHandler",qh);
+//    qView->show();
 
-    return sailfishRaspApp->exec();
+//    return sailfishRaspApp->exec();
 
     //return SailfishApp::main(argc, argv);
 }
